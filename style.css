@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, #0a0118, #040011 70%);
+  color: #e3e8ff;
+  overflow-x: hidden;
+}
+
+/* STATIC NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(8, 0, 30, 0.7);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 28px;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: #c9d3ff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #9bedff;
+  text-shadow: 0 0 10px #76ffff;
+}
+
+/* STATIC CINEMATIC INTRO */
+.intro-screen {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #0a0118, #040011);
+}
+
+.intro-screen h1 {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #9e8aff, #82ffff, #58ffd9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(160, 255, 255, 0.3);
+}
+
+.intro-screen p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+/* CONTENT */
+.content {
+  opacity: 0;
+  animation: contentFade 2s ease forwards;
+  margin-top: 80px;
+}
+
+@keyframes contentFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* SECTIONS */
+.hero, .vision, .contact {
+  padding: 120px 10%;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  color: #9bedff;
+  text-shadow: 0 0 20px #76ffff;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+.vision h2, .contact h2 {
+  font-size: 2.2rem;
+  color: #b4f0ff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 20px #00eaff;
+}
+
+.vision p {
+  max-width: 700px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+/* CONTACT BUTTONS */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn {
+  background: linear-gradient(135deg, #3d1c7c, #4a128c);
+  padding: 13px 22px;
+  color: #d9eaff;
+  text-decoration: none;
+  border-radius: 10px;
+  width: max-content;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #6631cc, #871aff);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #c9a4ff;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
